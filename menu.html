@@ -2410,8 +2410,8 @@
                 if (table_number > 0 & table_number < 9) {
                     $(".menuamoubt").each(function (e) {
                         if (parseInt($(this).text()) != 0) {
-                            item_list += "\n" + name_ary[e] + " : " + price_ary[e] + "元/份";
-                            total_qty += parseInt($(this).text()) * price_ary[e];
+                            item_list += "\n" + name_ary[e] + " : " + parseInt($(this).text()) + "份";
+                        total_qty += parseInt($(this).text()) * price_ary[e];
                         }
                     });
                     output_text = "桌號 : " + $(".table_number").val();
