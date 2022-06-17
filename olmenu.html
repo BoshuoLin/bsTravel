@@ -2435,22 +2435,21 @@
                     $(".menuamoubt").each(function (e) {
                         if (parseInt($(this).text()) != 0) {
                             item_list += "\n" + name_ary[e] + " : " + parseInt($(this).text()) + "份";
-                        total_qty += parseInt($(this).text()) * price_ary[e];
+                            total_qty += parseInt($(this).text()) * price_ary[e];
                         }
                     });
                     output_text = "\n電話號碼 : " + $(".phone_number").val();
                     output_text +=
-                        output_text = "\n取餐方式：" + check;
+                    output_text = "\n取餐方式：" + check;
                     output_text += "\n餐點清單：";
                     output_text += "\n------------------------------------";
                     output_text += item_list;
                     output_text += "\n------------------------------------";
                     output_text += "\n總計 : " + total_qty + "元";
-
                     $("#output_text").val(output_text);
                     var myMessage = $("#output_text").val();
                     console.log(myMessage);
-                    let url = 'https://script.google.com/macros/s/AKfycbwyhbZQgnuTWdSrs3DMGcSYMd0HsXMs0OuCn1dqcP4PGqaIXUNCFRZhfQTvbNWdF0Dj/exec'
+                    let url = 'https://script.google.com/macros/s/AKfycbyU9NZGJMOwAYPDtU8tTn1SQVa9rzfk6r7vfmDYaHWDlQvAuMCr76YKXSH8ekfTaVAe/exec'
                     var yes = confirm(myMessage);
                     if (yes) {
                         $.post(url,
