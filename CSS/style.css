@@ -957,6 +957,11 @@
         border-radius: 10px 10px 0 0;
     }
 
+    .case-item{
+        min-height: 300px;
+
+    }
+
     .case-time span,
     .case-location span {
         color: var(--gray);
